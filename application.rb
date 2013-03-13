@@ -23,4 +23,4 @@ html
     p Wow! I am a footer!!
 
 @@index
-  h1.hello Hello From Slim!
+h1.hello Hello From Slim!

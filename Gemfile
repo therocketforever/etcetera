@@ -9,6 +9,7 @@ gem "unicorn"
 gem "sinatra"
 
 gem "slim", "~> 2.0.0.pre.6"
+gem "handlebars"
 gem "sass"
 gem "coffee-script"
 
