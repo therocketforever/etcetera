@@ -1,7 +1,7 @@
 require 'bundler'
 
 Bundler.require
-require File.expand_path('../public/app', __FILE__)
+#require File.expand_path('../public/app', __FILE__)
 
 map '/assets' do
   environment = Sprockets::Environment.new

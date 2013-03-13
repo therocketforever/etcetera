@@ -13,6 +13,7 @@ gem "sass"
 gem "slim", "~> 2.0.0.pre.6"
 gem "coffee-script"
 gem "handlebars"
+gem "flavour_saver"
 
 group :production do
 end

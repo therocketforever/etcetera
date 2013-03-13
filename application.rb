@@ -7,6 +7,12 @@ class Application < Sinatra::Base
   configure(:development){Bundler.require(:development)}
   configure(:test){}
 
+  Tilt.register :handlebars, HandlebarsTemplate
+
+  helpers do
+    def handlebars(*args) render(:handlebars, *args) end
+  end
+
   get '/style.css' do
     content_type :css, :charset => "utf-8"
     scss :style
@@ -18,7 +24,7 @@ class Application < Sinatra::Base
   end
 end
 
-#Binding.pry
+Binding.pry
 __END__
 
 @@layout
@@ -35,6 +41,8 @@ html
 
 @@index
 h1 Hello From Slim!
-  script data-template-name="application" type="text/x-handlebars"
-    | {{ message }}
-  script src="app/assets/javascripts/app.js"
+script data-template-name="application" type="text/x-handlebars"
+  | {{ message }}
+script src="app/assets/javascripts/app.js"
+
+@@handlebars
