@@ -34,4 +34,7 @@ html
     p Wow! I am a footer!!
 
 @@index
-h1.hello Hello From Slim!
+h1 Hello From Slim!
+  script data-template-name="application" type="text/x-handlebars"
+    | {{ message }}
+  script src="app/assets/javascripts/app.js"

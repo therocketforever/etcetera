@@ -7,11 +7,12 @@ ruby "2.0.0"
 gem "thin"
 gem "unicorn"
 gem "sinatra", "~> 1.4.0.d"
+gem "sprockets"
 
-gem "slim", "~> 2.0.0.pre.6"
-gem "handlebars"
 gem "sass"
+gem "slim", "~> 2.0.0.pre.6"
 gem "coffee-script"
+gem "handlebars"
 
 group :production do
 end
