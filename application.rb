@@ -20,6 +20,7 @@ html
     == yield
 
   footer
+    p Wow! I am a footer!!
 
 @@index
-h1 Hello From Slim!
+  h1.hello Hello From Slim!
