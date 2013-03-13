@@ -7,10 +7,10 @@ class Application < Sinatra::Base
   configure(:development){Bundler.require(:development)}
   configure(:test){}
 
-  Tilt.register :handlebars, HandlebarsTemplate
-
   helpers do
-    def handlebars(*args) render(:handlebars, *args) end
+    def handlebars(template, options = {}, locals = {}, &block)
+      render(:handlebars, template, options, locals, &block)
+    end
   end
 
   get '/style.css' do
@@ -18,9 +18,12 @@ class Application < Sinatra::Base
     scss :style
   end
   
-  
   get '/' do
     slim :index
+  end
+  
+  get '/handlebars' do
+    handlebars :handlebars
   end
 end
 
@@ -46,3 +49,4 @@ script data-template-name="application" type="text/x-handlebars"
 script src="app/assets/javascripts/app.js"
 
 @@handlebars
+<h1>Hello from Handlebars</h1>
