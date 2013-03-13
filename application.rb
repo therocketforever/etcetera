@@ -2,12 +2,17 @@
 
 class Application < Sinatra::Base
   enable :inline_templates
+  
+  configure(:production){}
+  configure(:development){Bundler.require(:development)}
+  configure(:test){}
 
   get '/' do
     slim :index
   end
 end
 
+Binding.pry
 __END__
 
 @@layout

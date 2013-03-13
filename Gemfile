@@ -6,7 +6,7 @@ ruby "2.0.0"
 
 gem "thin"
 gem "unicorn"
-gem "sinatra"
+gem "sinatra", "~> 1.4.0.d"
 
 gem "slim", "~> 2.0.0.pre.6"
 gem "handlebars"
