@@ -7,7 +7,7 @@ ruby "2.0.0"
 gem "thin"
 gem "sinatra"
 
-gem "slim"
+gem "slim", "~> 2.0.0.pre.6"
 gem "sass"
 gem "coffee-script"
 
